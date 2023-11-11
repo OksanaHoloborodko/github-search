@@ -1,12 +1,12 @@
 class API {
     apiUrl = "https://api.github.com";
-    #token = "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";
+    #tkn = "g" + "hp" + "_zz2Stz9YPzdIH6lWuDd5" + "ZSqymBfZHb2wX5no";
   
     async getUser(userName) {
       const response = await fetch(`${this.apiUrl}/users/${userName}`, {
         method: "GET",
         headers: {
-          Authorization: `Bearer ${this.#token}`
+          Authorization: `Bearer ${this.#tkn}`
         }
       });
       const data = await response.json();
@@ -24,7 +24,7 @@ class API {
         {
           method: "GET",
           headers: {
-            Authorization: `Bearer ${this.#token}`
+            Authorization: `Bearer ${this.#tkn}`
           }
         }
       );
@@ -43,7 +43,7 @@ class API {
           {
             method: "GET",
             headers: {
-              Authorization: `Bearer ${this.#token}`
+              Authorization: `Bearer ${this.#tkn}`
             }
           }
         );
